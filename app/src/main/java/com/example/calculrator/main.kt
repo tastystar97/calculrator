@@ -1,7 +1,5 @@
 package com.example.calculrator
 
-import com.example.calculator.AbstractOperation
-
 fun main() {
     var num1: Double
     var num2: Double
