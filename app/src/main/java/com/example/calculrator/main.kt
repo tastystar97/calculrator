@@ -1,22 +1,21 @@
-import com.example.calculrator.AddOperation
-import com.example.calculrator.SubtractOperation
-import com.example.calculrator.MultiplyOperation
-import com.example.calculrator.DivideOperation
+package com.example.calculrator
+
+import com.example.calculator.AbstractOperation
 
 fun main() {
-    var num1: Int
-    var num2: Int
+    var num1: Double
+    var num2: Double
     var operator: Char
     var result: Double
 
     println("숫자를 입력하세요")
-    num1 = readLine()?.toIntOrNull() ?: 0
+    num1 = readLine()?.toDoubleOrNull() ?: 0.0
 
     println("연산자를 입력하세요 (+, -, *, / 중 하나)")
     operator = readLine()?.getOrNull(0) ?: '+'
 
     println("두 번째 숫자를 입력하세요")
-    num2 = readLine()?.toIntOrNull() ?: 0
+    num2 = readLine()?.toDoubleOrNull() ?: 0.0
 
     result = when (operator) {
         '+' -> AddOperation().operate(num1, num2)
